@@ -1,0 +1,21 @@
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.bg.whatsapp</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='discount_sale_order_lines']"
+                   position="after">
+                <setting id="sale_order_limit"                    
+                    help="User can limit the sale order amount">
+                        <div class="content-group">
+                            <div class="mt16">
+                                <label for="sale_order_limit"/>
+                                <field name="sale_order_limit"/>
+                            </div>
+                        </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
